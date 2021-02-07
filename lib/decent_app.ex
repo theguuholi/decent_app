@@ -6,7 +6,6 @@ defmodule DecentApp do
       commands
       |> Enum.reduce({balance, [], false}, fn command, {bal, res, error} ->
         IO.inspect res
-        IO.inspect command
         is_error?(error, bal, res, command)
       end)
 

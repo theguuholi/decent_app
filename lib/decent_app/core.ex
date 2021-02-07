@@ -5,7 +5,7 @@ defmodule DecentApp.Core do
 
   defp new_balance(false, bal, command, res) do
     new_balance = %{bal | coins: bal.coins - 1}
-
+    IO.inspect res
     res =
       cond do
         command === "NOTHING" ->

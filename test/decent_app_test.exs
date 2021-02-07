@@ -11,6 +11,7 @@ defmodule DecentAppTest do
       {new_balance, result} =
         DecentApp.call(balance, [3, "DUP", "COINS", 5, "+", "NOTHING", "POP", 7, "-", 9])
 
+        IO.inspect(result)
       assert new_balance.coins == 5
       assert length(result) > 1
     end
